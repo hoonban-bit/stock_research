@@ -10,7 +10,7 @@ def generate_report(ticker):
     os.makedirs(REPORTS_DIR, exist_ok=True)
     report_path = os.path.join(REPORTS_DIR, f"{ticker}_report.md")
 
-    content = f"# Stock Analysis Report: {ticker}\\n\\n## Overview\\n\\n## Financials (10-K)\\n\\n## Strategic Insights (Presentations)\\n\\n## Conclusion\\n"
+    content = f"# Stock Analysis Report: {ticker}\n\n## Overview\n\n## Financials (10-K)\n\n## Strategic Insights (Presentations)\n\n## Conclusion\n"
 
     with open(report_path, 'w') as f:
         f.write(content)

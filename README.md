@@ -4,7 +4,7 @@ This repository is designed to help organize and streamline stock research.
 
 ## Features & Workflow
 
-1. **Save Interesting Tickers**: Track tickers you find interesting (due to low value, momentum, compelling story, etc.) in `tickers.csv`.
+1. **Save Interesting Tickers**: Track tickers you find interesting (due to low value, momentum, compelling story, etc.) in multiple watchlists within the `watchlists/` directory.
 2. **Organize Raw Data**: Save source documents such as 10-K filings, earnings transcripts, and investor presentations in ticker-specific folders under `data/`.
 3. **Extract Data**: Use automated scripts in `src/` to pull key data from the saved documents.
 4. **Analyze and Report**: Synthesize the extracted information into reports saved in `reports/`.
@@ -19,16 +19,16 @@ This repository is designed to help organize and streamline stock research.
 │   ├── manage_tickers.py
 │   ├── extract_data.py
 │   └── analyze_report.py
-└── tickers.csv            # Master list of tracked tickers
+└── watchlists/            # CSV files grouping tickers (e.g., value_stocks.csv)
 ```
 
 ## Getting Started
 
-To add a new ticker to your tracking list:
+To add a new ticker to a tracking list:
 ```bash
-python src/manage_tickers.py AAPL "Strong momentum and services growth"
+python src/manage_tickers.py value_stocks AAPL "Strong momentum and services growth"
 ```
-This will append AAPL to `tickers.csv` and create `data/AAPL/` where you can drop their 10-K and presentations.
+This will append AAPL to `watchlists/value_stocks.csv` and create `data/AAPL/` where you can drop their 10-K and presentations.
 
 Extract data:
 ```bash
